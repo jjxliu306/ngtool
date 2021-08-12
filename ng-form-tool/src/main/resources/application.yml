@@ -1,0 +1,53 @@
+# Tomcat
+server:
+  tomcat:
+    uri-encoding: UTF-8
+    threads:      max: 1000
+      min-spare: 30 
+  port: 8888 
+  servlet:
+    context-path: /ng-server
+
+
+spring:
+  # 环境 dev|test|prod
+  profiles:
+    active: dev
+  # jackson时间格式化
+  jackson: 
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+    serialization: 
+      write-dates-as-timestamps: false #使用时间戳，使用数值timestamp表示日期
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 100MB
+      enabled: true
+  mvc:
+    throw-exception-if-no-handler-found: true
+    static-path-pattern: /static/**
+  web:    resources:      add-mappings: true
+ 
+
+#mybatis
+mybatis-plus:
+  mapper-locations: classpath*:/mapper/**/*.xml
+  #实体扫描，多个package用逗号或者分号分隔
+  typeAliasesPackage: com.lyf.*.*.entity;com.lyf.*.entity
+  typeEnumsPackage: com.lyf.common.enums;com.lyf.modules.*.enums
+  global-config:
+    #数据库相关配置
+    db-config:
+      #主键类型  AUTO:"数据库ID自增", INPUT:"用户输入ID", ID_WORKER:"全局唯一ID (数字类型唯一ID)", UUID:"全局唯一ID UUID";
+      id-type: AUTO
+      logic-delete-value: -1
+      logic-not-delete-value: 0
+    banner: false
+  #原生配置
+  configuration:
+    map-underscore-to-camel-case: true
+    cache-enabled: false
+    call-setters-on-nulls: true
+    jdbc-type-for-null: 'null'
+

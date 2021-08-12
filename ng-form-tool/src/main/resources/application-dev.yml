@@ -1,0 +1,108 @@
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    #driverClassName: oracle.jdbc.driver.OracleDriver
+    driverClassName: org.postgresql.Driver
+    #driverClassName: com.mysql.jdbc.Driver
+    druid:
+      #url: jdbc:oracle:thin:@114.116.27.255:1521:ORCL
+      #username: festa 
+      #password: festa   
+      url: jdbc:postgresql://localhost:7777/ng_server
+      username: ng
+      password: jjxliu306
+      #url: jdbc:mysql://localhost:3306/festa_boot?useUnicode=true&useSSL=false&characterEncoding=UTF-8&allowMultiQueries=true
+      #username: root
+      #password: JJXliu306,./
+      initial-size: 10
+      max-active: 30
+      min-idle: 10
+      max-wait: 60000
+      pool-prepared-statements: true
+      max-pool-prepared-statement-per-connection-size: 20
+      time-between-eviction-runs-millis: 60000
+      min-evictable-idle-time-millis: 300000
+      #validation-query: SELECT 1 from dual
+      validation-query: SELECT 1
+      test-while-idle: true
+      test-on-borrow: false
+      test-on-return: false
+      stat-view-servlet:
+        enabled: true
+        url-pattern: /druid/*
+        login-username: admin
+        login-password: tongruan.123
+      filter:
+        stat:
+          log-slow-sql: true
+          slow-sql-millis: 2000
+          merge-sql: false
+        wall:
+          config:
+            multi-statement-allow: true
+
+    
+  redis:
+    open: true  # 是否开启redis缓存  true开启   false关闭
+    database: 1
+    host: 127.0.0.1
+    port: 6379
+    password:    # 密码（默认为空）
+    timeout: 6000  # 连接超时时长（毫秒） 
+    jedis:
+      pool:
+        max-active: 1000  # 连接池最大连接数（使用负值表示没有限制）
+        max-wait: -1      # 连接池最大阻塞等待时间（使用负值表示没有限制）
+        max-idle: 10      # 连接池中的最大空闲连接
+        min-idle: 5       # 连接池中的最小空闲连接
+    
+  
+  cache:
+    type: redis
+    
+
+tr:
+  swagger:
+    show: true
+  upload:
+    # 文件上传临时目录 为空则为 java.io.tempdir
+    temp:
+    # 上传类型 local-本地文件,ftp-ftp,fastdfs-走fastdfs上传,qiniu-走七牛云 ,aliyun-走阿里云oss , telnet-走腾讯云cos
+    type: minio
+
+
+      #本地文件上传要配置的参数
+      #    local:
+      #      upload_local_path:
+
+      #FTP文件上传要配置的参数
+      #    ftp:
+      # ftp 的host地址，ip或者域名
+      #      host:
+      # ftp 的端口,一般默认21
+      #      port:
+      # ftp 账号
+      #      username:
+      # ftp 密码
+      #      password:
+    # ftp 上传文件目录
+    #      base:
+    fastDfs:
+      # tracker 服务器地址 包含端口
+      tracker_server: 114.116.30.229:22122
+      # storage 服务器地址 包含端口 可以为空
+      storage_server:
+      # fastdfs 安装服务器对外的nginx暴漏地址
+      nginx_url: http://114.116.30.229   
+    qiniu:
+      endpoint: http://cdn.opgis.com
+      accessKey: utP3XunNrYEuJjCMi3TB7ODmHzmWoNzfFUl8A0Kr
+      secretKey: _G3PQBcasrAY2TRNQ-UxJeuZO_UHWRqrO6tYmxp-
+      bucketName: lyfdemo
+    minio:
+      endpoint: http://121.36.252.198:9000 
+      accessKey: AKIAIOSFODNN7EXAMPLE
+      secretKey: wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
+      bucketName: festa
+
+ 
