@@ -1,0 +1,149 @@
+{
+	"list": [
+		{
+			"type": "input",
+			"label": "姓名",
+			"options": {
+				"type": "text",
+				"width": "100%",
+				"defaultValue": "",
+				"placeholder": "请输入",
+				"clearable": false,
+				"maxLength": 0,
+				"prepend": "",
+				"append": "",
+				"tooptip": "",
+				"hidden": false,
+				"disabled": false,
+				"dynamicHide": false,
+				"dynamicHideValue": ""
+			},
+			"model": "name",
+			"key": "input_1628755200021",
+			"rules": [
+				{
+					"required": true,
+					"message": "必填项",
+					"trigger": [
+						"blur"
+					]
+				}
+			]
+		},
+		{
+			"type": "textarea",
+			"label": "地址",
+			"options": {
+				"width": "100%",
+				"maxLength": 0,
+				"defaultValue": "",
+				"rows": 4,
+				"clearable": false,
+				"tooptip": "",
+				"hidden": false,
+				"disabled": false,
+				"placeholder": "请输入",
+				"dynamicHide": false,
+				"dynamicHideValue": ""
+			},
+			"model": "address",
+			"key": "textarea_1628755200021",
+			"rules": [
+				{
+					"required": true,
+					"message": "必填项",
+					"trigger": [
+						"blur"
+					]
+				}
+			]
+		},
+		{
+			"type": "radio",
+			"label": "性别",
+			"options": {
+				"disabled": false,
+				"hidden": false,
+				"defaultValue": "1",
+				"dynamic": 0,
+				"tooptip": "",
+				"remoteFunc": "",
+				"dataPath": "",
+				"remoteValue": "",
+				"remoteLabel": "",
+				"linkage": false,
+				"options": [
+					{
+						"value": "1",
+						"label": "男"
+					},
+					{
+						"value": "2",
+						"label": "女"
+					}
+				],
+				"dynamicHide": false,
+				"dynamicHideValue": ""
+			},
+			"model": "sex",
+			"key": "radio_1628755200021",
+			"rules": [
+				{
+					"required": false,
+					"message": "必填项",
+					"trigger": [
+						"change",
+						"blur"
+					]
+				}
+			]
+		},
+		{
+			"type": "textarea",
+			"label": "男性输入",
+			"options": {
+				"width": "100%",
+				"maxLength": 0,
+				"defaultValue": "",
+				"rows": 4,
+				"clearable": false,
+				"tooptip": "",
+				"hidden": false,
+				"disabled": false,
+				"placeholder": "请输入",
+				"dynamicHide": false,
+				"dynamicHideValue": ""
+			},
+			"model": "nanInput",
+			"key": "textarea_1628755202176",
+			"rules": [
+				{
+					"required": false,
+					"message": "必填项",
+					"trigger": [
+						"blur"
+					]
+				},
+				{
+					"vtype": 2,
+					"pattern": "",
+					"script": "if($.sex == 1){\nreturn $.nanInput\n}else{\nreturn true\n}",
+					"message": "男性输入不能为空",
+					"required": false,
+					"trigger": [
+						"change",
+						"blur"
+					]
+				}
+			]
+		}
+	],
+	"config": {
+		"labelPosition": "left",
+		"labelWidth": 100,
+		"size": "mini",
+		"outputHidden": true,
+		"hideRequiredMark": true,
+		"customStyle": ""
+	}
+}

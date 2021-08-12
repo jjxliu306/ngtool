@@ -58,7 +58,9 @@ public class NgFormValidator {
 	 */
 	public FormValidator validator(JSONObject formTemplate , JSONObject formValue) {
 		
-		List<Record> records = parseModel(formTemplate);
+		JSONArray list = formTemplate.getJSONArray("list");
+		
+		List<Record> records = parseModel(list);
 		
 		FormValidator formv = new FormValidator();
 		formv.setResult(true);
@@ -194,7 +196,7 @@ public class NgFormValidator {
 	 * @param template
 	 * @return
 	 */
-	private   List<Record> parseModel(JSONObject jo) {
+	private   List<Record> parseModel(JSONArray jo) {
 		
 		List<Record> list = new ArrayList<>();
 		
@@ -222,7 +224,7 @@ public class NgFormValidator {
 			
 			
 			
-			if(jobject.containsKey("model") && jobject.containsKey("key") && jobject.getString("model").equals(jobject.getString("key"))) {
+			if(jobject.containsKey("model") && jobject.containsKey("key")  ) {
 				
 				Record r = jobject.toJavaObject(Record.class);
 				 
