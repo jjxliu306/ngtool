@@ -3,8 +3,6 @@ package com.ng.form.pdf.item.table;
 import java.util.List;
 import java.util.Map;
 
-import org.apache.commons.lang.StringUtils;
-
 import com.alibaba.fastjson.JSONObject;
 import com.itextpdf.text.BaseColor;
 import com.itextpdf.text.DocumentException;
@@ -23,13 +21,7 @@ import com.ng.form.pdf.utils.PdfUtils;
 public class BaseTable extends PdfPTable{
 
 	 private List<Tr> trs ;
-	 
-	 private String name ;
-	  
-	 
-	 public void setName(String name) {
-		this.name = name;
-	}
+ 
 	 
 	 
 	 public List<Tr> getTrs() {
@@ -84,27 +76,7 @@ public class BaseTable extends PdfPTable{
 			}
 		}
 		
-		
-		if(StringUtils.isNotBlank(name)) {
-			
-			Phrase title = PdfUtils.getText(name);
-		 
-			float fontSize = 18f ;
-			if(name.contains("-")) {
-				fontSize = 13f ;
-			}
-			title.getFont().setSize(fontSize);
-			PdfPCell titleCell = new PdfPCell(title);
-			titleCell.setColspan(cols);
-			
-			
-			
-			titleCell.setBackgroundColor(new BaseColor(PdfUtils.CELL_BACKGROUND));
-			titleCell.setHorizontalAlignment(PdfPCell.ALIGN_CENTER);
-			
-			addCell(titleCell);
-			
-		}
+	 
 		if(trs != null)
 		for(Tr tr : trs) {
 			

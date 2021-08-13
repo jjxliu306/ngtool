@@ -46,17 +46,13 @@ public class BatchTable extends PdfPTable{
 		this(list , writer ,value , null);
 		 
 	}
-	
-	public BatchTable(List<Record> list ,PdfWriter writer, JSONArray value , String name) {
-		this(list ,writer , value , name,null);
-	}
-	
-	public BatchTable(List<Record> list ,PdfWriter writer, JSONArray value , String name, List<String> showItem) {
+	 
+	public BatchTable(List<Record> list ,PdfWriter writer, JSONArray value , List<String> showItem) {
 		 
 		this.writer = writer;
 		this.list = list;
 		this.value = value ;
-		this.name = name ;
+	 
 		this.showItem = showItem;
 		initRender();
 	}

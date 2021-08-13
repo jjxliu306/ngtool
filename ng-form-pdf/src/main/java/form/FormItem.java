@@ -34,7 +34,7 @@ public class FormItem {
  
 	
 	@SuppressWarnings("static-access")
-	public Element initData(JSONObject value , String name) {
+	public Element initData(JSONObject value) {
 		
 		String type = template.getString("type");
 		 
@@ -54,7 +54,6 @@ public class FormItem {
 			List<Tr> trs = template.parseArray(template.getString("trs"), Tr.class);
 			
 			BaseTable btable = new BaseTable(trs);
-			btable.setName(name);
 			 
 			btable.initData(value,writer);
 			
@@ -83,7 +82,7 @@ public class FormItem {
 			JSONArray batchValue = null;
 			
 			// 2020-10-14 如果value中没有此model得值,而且name为空(表明为一个大项中小项) 则跳过返回null
-			if(!value.containsKey(model) && name == null) {
+			if(!value.containsKey(model) ) {
 				return null;
 			}
 			
@@ -104,7 +103,7 @@ public class FormItem {
 				}
 			}
 			
-			BatchTable btable = new BatchTable(list ,writer, batchValue,name , showItems);
+			BatchTable btable = new BatchTable(list ,writer, batchValue , showItems);
 			 
 			return btable ;
 			
