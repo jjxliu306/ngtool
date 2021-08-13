@@ -71,6 +71,11 @@ public class Options {
 	 */
 	private String append;
 	
+	/**
+	 * 前缀信息
+	 */
+	private String prepend;
+	
 	// 其他值忽略  这里只需要展示的字段
 	
 	

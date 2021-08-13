@@ -223,26 +223,6 @@ public class FormUtil {
 	}
  
 
-	public static Map<String, String> parseCss(String css) {
-
-		if(StringUtils.isBlank(css)) {
-			return Collections.emptyMap();
-		}
-
-		Map<String, String>  map = new HashMap<>();
-
-		String[] cs = css.split(";");
-		for(String c : cs) {
-			if(StringUtils.isBlank(c)) continue ;
-
-			String[] kv = c.split(":");
-			if(kv == null || kv.length < 2) continue ;
-			map.put(kv[0], kv[1]);
-
-		}
-
-		return map ;
-	}
 
 	public static void main(String[] args) {
 //		String css = "width:10%;background:#F2F7FE;font-size:14px;font-weight:bolder;";

@@ -57,7 +57,8 @@
         </dependency>
 	</dependencies>
 	<modules> 
-		<module>ng-form-tool</module> 
+		<module>ng-form-tool</module>
+		<module>ng-form-pdf</module>
 	</modules>
 	<dependencyManagement>
 		<dependencies>
