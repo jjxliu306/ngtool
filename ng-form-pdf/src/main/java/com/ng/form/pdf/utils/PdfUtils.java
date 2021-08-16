@@ -12,6 +12,7 @@ import com.itextpdf.text.Font;
 import com.itextpdf.text.Phrase;
 import com.itextpdf.text.pdf.PdfWriter;
 import com.ng.form.item.Record;
+import com.ng.form.pdf.item.PdfItem;
 import com.ng.form.tool.FormUtil;
 
 public class PdfUtils {
@@ -101,6 +102,11 @@ public class PdfUtils {
 	public static Element getValue(JSONObject value , Record record , PdfWriter writer ) {
  
 		return getValue(value, record, writer , getDefaultFont());
+	}
+	
+	public static PdfItem getPdfItem(JSONObject item) {
+		
+		return null;
 	}
 	
 	public static Phrase getText(String text) { 

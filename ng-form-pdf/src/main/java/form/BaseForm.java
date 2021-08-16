@@ -64,10 +64,8 @@ public class BaseForm {
 			}
 			
 			if(listSize == 0) {
-				BaseTable btable = new BaseTable(null);
-		 
-				 
-				btable.initData(null , writer);
+				BaseTable btable = new BaseTable();
+		  
 				p.add(btable);
 			}
 
