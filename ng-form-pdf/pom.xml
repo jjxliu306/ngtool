@@ -3,7 +3,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
-		<groupId>com.ng</groupId>
+		<groupId>io.github.jjxliu306</groupId>
 		<artifactId>ngtool</artifactId>
 		<version>1.0.0</version>
 	</parent>
@@ -42,7 +42,7 @@
 			<version>5.2.0</version>
 		</dependency>
 		<dependency>
-			<groupId>com.ng</groupId>
+			<groupId>io.github.jjxliu306</groupId>
 			<artifactId>ng-form-core</artifactId>
 			<version>1.0.0</version>
 		</dependency>
@@ -62,5 +62,35 @@
 			</resource>
 		</resources>
 	</build>
-
+	<!-- 许可协议 -->
+	<licenses>
+		<license>
+			<name>MIT License</name>
+			<url>http://www.opensource.org/licenses/mit-license.php</url>
+		</license>
+	</licenses>
+	<!-- 开发者信息 -->
+	<developers>
+		<developer>
+			<name>jjxliu306</name>
+			<email>jjxliu306@163.com</email>
+		</developer>
+	</developers>
+	<!-- 源码管理 -->
+	<scm>
+		<connection>https://github.com/jjxliu306/ngtool</connection>
+		<developerConnection>https://github.com/jjxliu306/ngtool.git</developerConnection>
+		<url>https://github.com/jjxliu306/ngtool/tree/master</url>
+	</scm>
+	<!-- 发布管理 -->
+	<distributionManagement>
+		<snapshotRepository>
+			<id>ossrh</id>
+			<url>https://oss.sonatype.org/content/repositories/snapshots</url>
+		</snapshotRepository>
+		<repository>
+			<id>ossrh</id>
+			<url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+		</repository>
+	</distributionManagement>
 </project>
