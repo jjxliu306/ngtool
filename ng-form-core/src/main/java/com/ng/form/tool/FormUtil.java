@@ -1,8 +1,6 @@
 package com.ng.form.tool;
  
 
-import java.util.Collections;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.regex.Pattern;
@@ -33,12 +31,12 @@ public class FormUtil {
 	 * @param value
 	 * @return
 	 */
-	public static boolean recordVisible(Record r , JSONObject value) {
+	public static boolean recordVisible(Record r , JSONObject formValue) {
 
 		if(r.getOptions() == null) return true ;
 
 		Options option = r.getOptions();
-		return recordVisible(option, value);
+		return recordVisible(option, formValue);
 
 	}
 
@@ -108,7 +106,7 @@ public class FormUtil {
 	 * @param value
 	 * @return
 	 */
-	public static boolean recordVisible(Options option , JSONObject value) {
+	public static boolean recordVisible(Options option , JSONObject formValue) {
  
 		// 直接隐藏
 		if(option.getHidden() != null && option.getHidden() == true) return false;
@@ -123,14 +121,14 @@ public class FormUtil {
 			return true ;
 		}
 
-		return getVisible(script, value);
+		return getVisible(script, formValue);
 
 
 	}
 
 
-	public static boolean getVisible(String script , Map<String, Object> value) {
-		Object ret = getScirptValue(script, value);
+	public static boolean getVisible(String script , Map<String, Object> formValue) {
+		Object ret = getScirptValue(script, formValue);
 		if(ret instanceof Boolean) {
 			return (Boolean)ret;
 		} else {

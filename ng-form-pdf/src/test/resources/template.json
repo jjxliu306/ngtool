@@ -1,0 +1,243 @@
+{
+	"list": [
+		{
+			"type": "control",
+			"label": "弹性容器",
+			"list": [
+				{
+					"type": "input",
+					"label": "输入框",
+					"options": {
+						"type": "text",
+						"width": "100%",
+						"defaultValue": "",
+						"placeholder": "请输入",
+						"clearable": false,
+						"maxLength": null,
+						"prepend": "",
+						"append": "",
+						"tooptip": "",
+						"hidden": false,
+						"disabled": false,
+						"dynamicHide": false,
+						"dynamicHideValue": ""
+					},
+					"model": "input_1629873001352",
+					"key": "input_1629873001352",
+					"rules": [
+						{
+							"required": false,
+							"message": "必填项",
+							"trigger": "blur"
+						}
+					]
+				}
+			],
+			"options": {
+				"width": "100%",
+				"bordered": true,
+				"disabled": false,
+				"customStyle": "",
+				"customClass": "",
+				"noCopy": false,
+				"noAdd": false,
+				"noRemove": false,
+				"dynamicVisible": false,
+				"dynamicVisibleValue": ""
+			},
+			"key": "control_1629873001353",
+			"model": "control_1629873001353"
+		},
+		{
+			"type": "table",
+			"label": "表格布局",
+			"trs": [
+				{
+					"tds": [
+						{
+							"colspan": 1,
+							"rowspan": 1,
+							"list": [
+								{
+									"type": "number",
+									"label": "数字输入框",
+									"options": {
+										"width": "100%",
+										"defaultValue": 0,
+										"min": 0,
+										"max": 100,
+										"precision": null,
+										"tooptip": "",
+										"prepend": "",
+										"append": "",
+										"step": 1,
+										"hidden": false,
+										"disabled": false,
+										"placeholder": "请输入",
+										"dynamicHide": false,
+										"dynamicHideValue": ""
+									},
+									"model": "number_1629873001352",
+									"key": "number_1629873001352",
+									"rules": [
+										{
+											"required": false,
+											"message": "必填项",
+											"trigger": "blur"
+										}
+									]
+								}
+							]
+						},
+						{
+							"colspan": 1,
+							"rowspan": 1,
+							"list": [
+								{
+									"type": "radio",
+									"label": "单选框",
+									"options": {
+										"disabled": false,
+										"hidden": false,
+										"defaultValue": "",
+										"dynamic": 0,
+										"tooptip": "",
+										"remoteFunc": "",
+										"dataPath": "",
+										"remoteValue": "",
+										"remoteLabel": "",
+										"linkage": false,
+										"options": [
+											{
+												"value": "1",
+												"label": "选项1"
+											},
+											{
+												"value": "2",
+												"label": "选项2"
+											}
+										],
+										"dynamicHide": false,
+										"dynamicHideValue": ""
+									},
+									"model": "radio_1629873001352",
+									"key": "radio_1629873001352",
+									"rules": [
+										{
+											"required": false,
+											"message": "必填项"
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			],
+			"options": {
+				"width": "100%",
+				"bordered": true,
+				"bright": false,
+				"small": true,
+				"customStyle": "",
+				"customClass": "",
+				"dynamicVisible": false,
+				"dynamicVisibleValue": ""
+			},
+			"key": "table_1629873001353",
+			"model": "table_1629873001353"
+		},
+		{
+			"type": "grid",
+			"label": "栅格布局",
+			"columns": [
+				{
+					"span": 12,
+					"list": [
+						{
+							"type": "checkbox",
+							"label": "多选框",
+							"options": {
+								"disabled": false,
+								"hidden": false,
+								"defaultValue": [],
+								"dynamic": 0,
+								"tooptip": "",
+								"remoteFunc": "",
+								"dataPath": "",
+								"remoteValue": "",
+								"remoteLabel": "",
+								"linkage": false,
+								"options": [
+									{
+										"value": "1",
+										"label": "选项1"
+									},
+									{
+										"value": "2",
+										"label": "选项2"
+									}
+								],
+								"dynamicHide": false,
+								"dynamicHideValue": ""
+							},
+							"model": "checkbox_1629873001352",
+							"key": "checkbox_1629873001352",
+							"rules": [
+								{
+									"required": false,
+									"message": "必填项",
+									"trigger": "blur"
+								}
+							]
+						}
+					]
+				},
+				{
+					"span": 12,
+					"list": [
+						{
+							"type": "time",
+							"label": "时间选择框",
+							"options": {
+								"width": "100%",
+								"defaultValue": "",
+								"disabled": false,
+								"tooptip": "",
+								"hidden": false,
+								"clearable": false,
+								"placeholder": "请选择",
+								"format": "HH:mm:ss",
+								"dynamicHide": false,
+								"dynamicHideValue": ""
+							},
+							"model": "time_1629873001352",
+							"key": "time_1629873001352",
+							"rules": [
+								{
+									"required": false,
+									"message": "必填项"
+								}
+							]
+						}
+					]
+				}
+			],
+			"options": {
+				"gutter": 0,
+				"dynamicVisible": false,
+				"dynamicVisibleValue": ""
+			},
+			"key": "grid_1629873001353",
+			"model": "grid_1629873001353"
+		}
+	],
+	"config": {
+		"labelPosition": "left",
+		"labelWidth": 100,
+		"size": "default",
+		"outputHidden": true,
+		"hideRequiredMark": true,
+		"customStyle": ""
+	}
+}

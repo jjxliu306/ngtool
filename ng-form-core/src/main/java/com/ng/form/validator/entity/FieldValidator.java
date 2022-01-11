@@ -2,7 +2,7 @@ package com.ng.form.validator.entity;
 
 import java.util.List;
 
-import com.alibaba.fastjson.annotation.JSONField; 
+import com.alibaba.fastjson.annotation.JSONField;
 import com.ng.form.item.Rule;
 
 import lombok.Data;
