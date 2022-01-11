@@ -43,7 +43,7 @@
 		</dependency>
 		<dependency>
 			<groupId>com.ng</groupId>
-			<artifactId>ng-form-tool</artifactId>
+			<artifactId>ng-form-core</artifactId>
 			<version>1.0.0</version>
 		</dependency>
 	</dependencies>

@@ -9,8 +9,8 @@
 		<artifactId>ngtool</artifactId>
 		<version>1.0.0</version>
 	</parent>
-	<artifactId>ng-form-tool</artifactId>
-	<name>ng-form-tool</name>
+	<artifactId>ng-form-core</artifactId>
+	<name>ng-form-core</name>
 	<packaging>jar</packaging>
 	<url>http://maven.apache.org</url>
 
